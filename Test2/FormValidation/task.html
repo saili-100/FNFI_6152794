@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Validate Me!</title>
+    <script src="validate.js"></script>
+</head>
+<body>
+
+    
+    <h2>Validate me!</h2>
+    <form id="myForm">
+        <label>Username (6-8 characters)</label><br>
+        <input type="text" id="username" required><br><br>
+
+        <label>Pin</label><br>
+        <input type="text" id="pin" required><br><br>
+
+        <label>States</label><br>
+        <select id="state" required>
+            <option value="">--Select--</option>
+            <option value="option1">Maharashtra</option>
+            <option value="option2">Karnataka</option>
+            <option value="option4">Gujrat</option>
+            
+        </select><br><br>
+
+        <!-- Checkbox -->
+        <input type="checkbox" id="validatePin"> Validate Pin<br><br>
+
+        <!-- Radio buttons -->
+        <label>Select one Food:</label><br>
+        <input type="radio" name="product" value="Milk"> Milk <br>
+        <input type="radio" name="product" value="Butter"> Butter <br>
+        <input type="radio" name="product" value="Cheese"> Cheese <br><br>
+
+        <button type="button" onclick="validateForm()">Check Form</button>
+    </form>
+
+    <p id="result" style="color:red;"></p>
+</body>
+</html>
