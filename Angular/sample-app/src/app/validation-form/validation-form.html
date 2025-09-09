@@ -1,0 +1,64 @@
+
+<div class="h2">Template Driven Forms</div>
+<hr>
+<div class="container">
+    <form #empForm="ngForm" (ngSubmit)="onSubmit(empForm)">
+        <div class="col-md-6">
+            <label for="id">Employee Id</label>
+            <input class="form-control" type="number" #id="ngModel" name="id" required min="100" max="9999" [(ngModel)]="employee.empId">
+            <p *ngIf ="!id?.valid && (id?.dirty || id?.touched)">
+                <span *ngIf="id.errors?.['required']" class = "text-danger">Id should be mandatory</span>
+                <span *ngIf="id.errors?.['min']" class = "text-danger">Id should be minimum 100</span>
+                <span *ngIf="id.errors?.['max']" class = "text-danger">Id should be maximum 9999</span>
+            </p>
+        </div>
+
+        <div class="col-md-6">
+            <label for="empName">Employee Name</label>
+            <input class="form-control" type="text" #empName="ngModel" name="empName" required [(ngModel)]="employee.empName">
+            <p *ngIf ="!empName?.valid && (empName?.dirty || empName?.touched)">
+                <span *ngIf="empName.errors?.['required']" class = "text-danger">Name should be mandatory</span>
+                <span *ngIf="empName.errors?.['minlength']" class = "text-danger">Name should be minimum 3 characters</span>
+                <span *ngIf="empName.errors?.['maxlength']" class = "text-danger">Name should be maximum 20 characters</span>
+            </p>
+        </div>
+
+        <div class="col-md-6">
+            <label for="empAddress">Employee Address</label>
+            <input class="form-control" type="text" #empAddress="ngModel" name="empAddress" required minlength="6" maxlength="10" [(ngModel)]="employee.empAddress">
+            <p *ngIf ="!empAddress?.valid && (empAddress?.dirty || empAddress?.touched)">
+                <span *ngIf="empAddress.errors?.['required']" class = "text-danger">Address should be mandatory</span>
+                <span *ngIf="empAddress.errors?.['minlength']" class = "text-danger">Address should be minimum 6 characters</span>
+                <span *ngIf="empAddress.errors?.['maxlength']" class = "text-danger">Address should be maximum 50 characters</span>
+            </p>
+        </div>
+
+        <div class="col-md-6">
+            <label for="empSalary">Employee Salary</label>
+            <input class="form-control" type="number" #empSalary="ngModel" name="empSalary" required min="10000" max="100000" [(ngModel)]="employee.empSalary">
+            <p *ngIf ="!empSalary?.valid && (empSalary?.dirty || empSalary?.touched)">
+                <span *ngIf="empSalary.errors?.['required']" class = "text-danger">Salary should be mandatory</span>
+                <span *ngIf="empSalary.errors?.['min']" class = "text-danger">Salary should be minimum 1000</span>
+                <span *ngIf="empSalary.errors?.['max']" class = "text-danger">Salary should be maximum 10000</span>
+            </p>
+        </div>
+
+             
+
+        <div class="col-md-6">
+            <label for="empImg">Employee Image</label>
+            <input class="form-control" type="text" #empImg="ngModel" name="empImg" required [(ngModel)]="employee.empImg">
+            <p *ngIf ="!empImg?.valid && (empImg?.dirty || empImg?.touched)">
+                <span *ngIf="empImg.errors?.['required']" class = "text-danger">Image should be mandatory</span>
+                <span *ngIf="empImg.errors?.['pattern']" class = "text-danger">Image should be valid URL</span> 
+            </p>
+        </div>
+
+        <div class="col-md-6">
+            <button type = "submit" class ="btn btn-info" [disabled] = "!empForm.valid">Submit</button>
+        </div>
+    </form>
+</div>
+
+
+

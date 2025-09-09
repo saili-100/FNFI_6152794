@@ -1,0 +1,60 @@
+
+.calc-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.calc-container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.calc-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.calc-controls input,
+.calc-controls select,
+.calc-controls button {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.calc-controls input {
+  width: 120px;
+}
+
+.calc-controls select {
+  width: 100px;
+}
+
+.calc-controls button {
+  background-color: #0078d4;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.calc-controls button:hover {
+  background-color: #005fa3;
+}
+
+.result {
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: 10px;
+  color: #0078d4;
+}

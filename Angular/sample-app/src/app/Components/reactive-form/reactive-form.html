@@ -1,0 +1,57 @@
+<!-- <h2>{{title|uppercase}}</h2> -->
+<hr>
+<form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <label for="empId">Enter the Id</label>
+            <input type="text"  id="empId" class="form-control" formControlName="empId">
+            <p *ngIf="empId?.invalid && (empId?.dirty || empId?.touched)" class="text-danger">
+                <span *ngIf="empId?.errors?.['required']">Id is Mandatory</span>
+            </p>        
+        </div>
+
+        <div class="col-md-6">
+            <label for="empName">Enter the name</label>
+            <input type="text"  id="empName" class="form-control" formControlName="empName">
+            <p *ngIf="empName?.invalid && (empName?.dirty || empName?.touched)" class="text-danger">
+                <span *ngIf="empName?.errors?.['required']">Name is Mandatory</span>
+            </p>        
+        </div>
+
+        <div class="col-md-6">
+            <label for="empAddress">Enter the Address</label>
+            <input type="text"  id="empAddress" class="form-control" formControlName="empAddress">
+            <p *ngIf="empAddress?.invalid && (empAddress?.dirty || empAddress?.touched)" class="text-danger">
+                <span *ngIf="empAddress?.errors?.['required']">Address is Mandatory</span>
+            </p>        
+        </div>
+
+        <div class="col-md-6">
+            <label for="empSalary">Enter the Salary</label>
+            <input type="text"  id="empSalary" class="form-control" formControlName="empSalary">
+            <p *ngIf="empSalary?.invalid && (empSalary?.dirty || empSalary?.touched)" class="text-danger">
+                <span *ngIf="empSalary?.errors?.['required']">Salary is Mandatory</span>
+                <span *ngIf="empSalary?.errors?.['min']">Salary should be greater than 1000</span>
+            </p>
+        </div>
+
+         <div class="col-md-6">
+            <label for="empImg">Enter the Image</label>
+            <input type="text"  id="empImg" class="form-control" formControlName="empImg">
+            <p *ngIf="empImg?.invalid && (empImg?.dirty || empImg?.touched)" class="text-danger">
+                <span *ngIf="empImg?.errors?.['required']">Image is Mandatory</span>
+                
+            </p>
+        </div>
+
+
+
+        <div class="col-md-6 mt-3">
+            <button type="submit" class="btn btn-primary" [disabled]="employeeForm.invalid">Submit</button>
+        <div>
+
+        
+
+    </div>
+</div>
