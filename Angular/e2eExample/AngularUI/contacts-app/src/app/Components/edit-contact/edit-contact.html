@@ -1,0 +1,132 @@
+
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="h1">
+                <h1>Edit Contact Details</h1>
+                <hr>
+            </div>
+            <section>
+                <input class="form-control"[value] ="foundContact.contactId" disabled/>
+                <input class="form-control"[(ngModel)] ="foundContact.contactName"/>
+                <input class="form-control"[(ngModel)] ="foundContact.contactNo"/>
+                <input class="form-control"[(ngModel)] ="foundContact.contactImg"/>
+            </section>
+        </div>
+        <button class="btn btn-success mx-2" (click)="onUpdate()">
+            <i class="fa fa-save" aria-hidden="true"></i> Update
+        </button>
+
+        <button class="btn btn-secondary mx-2" routerLink="/">
+            <i class="fa fa-backward" aria-hidden="true"></i> Back
+        </button>
+
+
+    </div>
+</div> -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="row">
+                <h1>Edit Contact Details</h1>
+                <hr>
+            </div>
+            <section>
+                <input class="form-control my-2" [value]="foundContact.contactId" disabled>
+                <input class="form-control my-2" [(ngModel)]="foundContact.contactName">
+                <input class="form-control my-2" [(ngModel)]="foundContact.contactNo">
+                <input class="form-control my-2" [(ngModel)]="foundContact.contactImg">
+            </section>
+            <button class="btn btn-success mx-2" (click)="onUpdate()">
+                <i class="fa fa-save" aria-hidden="true"></i>
+                Save
+            </button>
+            <button class="btn btn-secondary mx-2" routerlink="/"></button>
+                <i class="fa fa-fa-backward" aria-hidden="true"></i>
+                Back
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+
+
+ <!-- <div class="mb-3">
+    <label for="contactId" class="form-label">Contact ID</label>
+    <input
+      type="text"
+      id="contactId"
+      class="form-control"
+      placeholder="Enter Contact ID"
+      [(ngModel)]="contactList.id"
+      name="id"
+      required
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="contactName" class="form-label">Name</label>
+    <input
+      type="text"
+      id="contactName"
+      class="form-control"
+      placeholder="Enter Name"
+      [(ngModel)]="contactList.name"
+      name="name"
+      required
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="contactPhone" class="form-label">Phone Number</label>
+    <input
+      type="text"
+      id="contactPhone"
+      class="form-control"
+      placeholder="Enter Phone Number"
+      [(ngModel)]="contactList.phoneNo"
+      name="phoneNo"
+      required
+    />
+  </div>
+
+  <button type="submit" class="btn btn-primary" (onClick)="onSubmit()">
+    Submit
+  </button>
+</form> --> 
+
+<!--<div class="container my-4">
+  <div class="row">
+    <div class="col-12 text-center bg-warning text-dark py-4 rounded shadow">
+      <h1 class="display-4">✏️ Edit Contact</h1>
+    </div>
+  </div>
+
+  <div class="row justify-content-center mt-5" >
+    <div class="col-md-6 bg-white p-4 rounded shadow">
+      <form (ngSubmit)="updateContact()" #editForm="ngForm">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" [(ngModel)]="contact.name" name="name" required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="phoneNo" class="form-label">Phone Number</label>
+          <input type="text" class="form-control" [(ngModel)]="contact.phoneNo" name="phoneNo" required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="photo" class="form-label">Photo URL</label>
+          <input type="text" class="form-control" [(ngModel)]="contact.photo" name="photo" />
+        </div>
+
+        <button type="submit" class="btn btn-success">Update Contact</button>
+        <a routerLink="/" class="btn btn-secondary ms-2">Cancel</a>
+      </form>
+    </div>
+  </div>
+</div>
+<pre>{{ contact | json }}</pre> --> 
