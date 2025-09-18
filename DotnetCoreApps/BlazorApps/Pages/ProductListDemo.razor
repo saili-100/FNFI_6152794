@@ -1,0 +1,246 @@
+﻿@* @using BlazorApp.shared
+@inject HttpClient Http
+<div>
+    <h3>ProductListDemo</h3>
+    @if (productList != null)
+    {
+        @foreach(var product in productList)
+        {
+            <p>@product.Name - @product.Price</p>
+        }
+    }
+    else
+    {
+        <p>Product List not available</p>
+    }
+</div> 
+
+@code {
+    private List<Product> productList=null;
+    protected override async Task OnInitializedAsync()
+    {
+        base.OnInitialized();
+        productList = await Http.GetFromJsonAsync<List<Product>>("/api/Products");
+    }
+
+
+}  *@
+@*  
+@using BlazorApp.shared
+@inject HttpClient Http
+
+<div class="container mt-4">
+    <h3 class="text-primary mb-4">🛍️ Product List</h3>
+
+    @if (productList != null && productList.Any())
+    {
+        <div class="row">
+            @foreach (var product in productList)
+            {
+                <div class="col-md-4 mb-3">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">@product.Name</h5>
+                            <p class="card-text text-success fw-bold">₹@product.Price</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-warning" role="alert">
+            Product List not available
+        </div>
+    }
+</div>
+
+@code {
+    private List<Product> productList = null;
+
+    protected override async Task OnInitializedAsync()
+    {
+        productList = await Http.GetFromJsonAsync<List<Product>>("/api/Products");
+    }
+} *@
+
+@* @using BlazorApp.shared
+@inject HttpClient Http
+
+<div class="container mt-4">
+    <h3 class="text-primary mb-4">🛍️ Product List</h3>
+
+    <!-- Search and Action Section -->
+    <div class="mb-4">
+        <label for="productIdInput" class="form-label">Enter Product ID:</label>
+        <input type="number" id="productIdInput" class="form-control" @bind="searchId" />
+        <div class="mt-2 d-flex gap-2">
+            <button class="btn btn-outline-info" @onclick="FindProductById">Find</button>
+            <button class="btn btn-outline-warning" @onclick="UpdateProduct">Update</button>
+            <button class="btn btn-outline-danger" @onclick="DeleteProduct">Delete</button>
+        </div>
+    </div>
+
+    <!-- Display Selected Product -->
+    @if (selectedProduct != null)
+    {
+        <div class="alert alert-info">
+            <strong>Name:</strong> @selectedProduct.Name <br />
+            <strong>Price:</strong> ₹@selectedProduct.Price
+        </div>
+    }
+
+    <!-- Product List -->
+    @if (productList != null && productList.Any())
+    {
+        <div class="row">
+            @foreach (var product in productList)
+            {
+                <div class="col-md-4 mb-3">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">@product.Name</h5>
+                            <p class="card-text text-success fw-bold">₹@product.Price</p>
+                            <p class="card-text"><strong>ID:</strong> @product.Id</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-warning" role="alert">
+            Product List not available
+        </div>
+    }
+</div>
+
+@code {
+    private List<Product> productList = null;
+    private Product selectedProduct = null;
+    private int searchId;
+
+    protected override async Task OnInitializedAsync()
+    {
+        productList = await Http.GetFromJsonAsync<List<Product>>("/api/Products");
+    }
+
+    private void FindProductById()
+    {
+        selectedProduct = productList?.FirstOrDefault(p => p.Id == searchId);
+    }
+
+    private void UpdateProduct()
+    {
+        var product = productList?.FirstOrDefault(p => p.Id == searchId);
+        if (product != null)
+        {
+            product.Name = "";
+            product.Price += 100; // Example update
+            selectedProduct = product;
+        }
+    }
+
+    private void DeleteProduct()
+    {
+        var product = productList?.FirstOrDefault(p => p.Id == searchId);
+        if (product != null)
+        {
+            productList.Remove(product);
+            selectedProduct = null;
+        }
+    }
+}
+ *@
+
+@using BlazorApp.shared
+@inject HttpClient Http
+
+<div class="container mt-4">
+    <h3 class="text-primary mb-4">🛍️ Product List</h3>
+
+    <!-- Update Section -->
+    <div class="mb-4">
+        <label class="form-label">Enter Product ID:</label>
+        <input type="number" class="form-control mb-2" @bind="searchId" />
+
+        <label class="form-label">Enter New Product Name:</label>
+        <input type="text" class="form-control mb-2" @bind="newProductName" />
+
+        <div class="d-flex gap-2 mt-2">
+            <button class="btn btn-outline-warning" @onclick="UpdateProductName">Update Name</button>
+            <button class="btn btn-outline-danger" @onclick="DeleteProduct">Delete Product</button>
+        </div>
+    </div>
+
+    <!-- Feedback -->
+    @if (selectedProduct != null)
+    {
+        <div class="alert alert-info">
+            <strong>Updated Product:</strong> @selectedProduct.Name <br />
+            <strong>Price:</strong> ₹@selectedProduct.Price
+        </div>
+    }
+
+    <!-- Product List -->
+    @if (productList != null && productList.Any())
+    {
+        <div class="row">
+            @foreach (var product in productList)
+            {
+                <div class="col-md-4 mb-3">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">@product.Name</h5>
+                            <p class="card-text text-success fw-bold">₹@product.Price</p>
+                            <p class="card-text"><strong>ID:</strong> @product.Id</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-warning" role="alert">
+            Product List not available
+        </div>
+    }
+</div>
+
+@code {
+    private List<Product> productList = null;
+    private Product selectedProduct = null;
+    private int searchId;
+    private string newProductName;
+
+    protected override async Task OnInitializedAsync()
+    {
+        productList = await Http.GetFromJsonAsync<List<Product>>("/api/Products");
+    }
+
+    private void UpdateProductName()
+    {
+        var product = productList?.FirstOrDefault(p => p.Id == searchId);
+        if (product != null && !string.IsNullOrWhiteSpace(newProductName))
+        {
+            product.Name = newProductName;
+            selectedProduct = product;
+            newProductName = string.Empty;
+        }
+    }
+
+    private void DeleteProduct()
+    {
+        var product = productList?.FirstOrDefault(p => p.Id == searchId);
+        if (product != null)
+        {
+            productList.Remove(product);
+            selectedProduct = null;
+        }
+    }
+}
+
+

@@ -1,0 +1,53 @@
+﻿@using BlazorApp.shared
+
+<h3 class="mb-4 text-primary">Products List</h3>
+
+<div class="table-responsive">
+    <table class="table table-hover table-bordered align-middle">
+        <thead class="table-light">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in products)
+            {
+                <tr>
+                    <td>@product.Id</td>
+                    <td>@product.Name</td>
+                    <td>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-sm btn-outline-primary" @onclick="() => onShow(product)">
+                                <i class="bi bi-pencil-square"></i> Edit
+                            </button>
+                            <button class="btn btn-sm btn-outline-danger">
+                                <i class="bi bi-trash"></i> Delete
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<Product_detail SelectedProduct="selectedProduct" />
+
+@code {
+    private List<Product> products = new List<Product>
+    {
+        new Product { Id = 1, Name = "Laptop", Price = 999.99m },
+        new Product { Id = 2, Name = "Smartphone", Price = 499.99m },
+        new Product { Id = 3, Name = "Tablet", Price = 299.99m }
+    };
+
+    private Product selectedProduct = null;
+
+    private void onShow(Product p)
+    {
+        selectedProduct = p;
+    }
+}
+
