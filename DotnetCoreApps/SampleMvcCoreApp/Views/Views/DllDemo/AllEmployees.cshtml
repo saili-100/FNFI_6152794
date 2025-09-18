@@ -1,0 +1,35 @@
+﻿@model IEnumerable<DotNetCorelib.DTOs.EmployeeDTO>
+
+@{
+    ViewData["Title"] = "All Employees";
+}
+
+<h1 class="text-center my-4">@ViewData["Title"]</h1>
+
+<div class="container">
+    <table class="table table-striped table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>EmpId</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Salary</th>
+                <th>DeptId</th>
+                <th>DeptName</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var employee in Model)
+            {
+                <tr>
+                    <td>@employee.EmpId</td>
+                    <td>@employee.EmpName</td>
+                    <td>@employee.EmpAddress</td>
+                    <td>@employee.EmpSalary.ToString("C")</td>
+                    <td>@employee.DeptId</td>
+                    <td>@employee.DeptName</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

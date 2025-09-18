@@ -1,0 +1,32 @@
+﻿@model MyCustomer
+@{
+    ViewData["Title"] = "NewCustomer";
+}
+
+<h1>NewCustomer</h1>
+
+<div>
+    <form asp-action="NewCustomer" method="post">
+        <div>
+            <label>Customer Name</label>
+            <input class="form-control" asp-for="CstName" />
+            <span asp-validation-for="CstName" class="text-danger"></span>
+        </div>
+        <div>
+            <label>Customer Address</label>
+            <input class="form-control" asp-for="CstAddress" />
+            <span asp-validation-for="CstAddress" class="text-danger"></span>
+
+        </div>
+        <div>
+            <label>Bill Amount</label>
+            <input class="form-control" asp-for="BillAmount" />
+            <span asp-validation-for="BillAmount" class="text-danger"></span>
+
+        </div>
+        <div>
+            <button class="btn btn-info m-3" type="submit">Add Customer</button>
+        </div>
+    </form>
+</div>
+
