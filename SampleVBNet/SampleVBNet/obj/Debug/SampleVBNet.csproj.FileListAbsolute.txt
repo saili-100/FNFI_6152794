@@ -1,0 +1,11 @@
+C:\Users\6152794\source\repos\SampleVBNet\SampleVBNet\obj\Debug\SampleVBNet.csproj.AssemblyReference.cache
+C:\Users\6152794\source\repos\SampleVBNet\SampleVBNet\obj\Debug\SampleVBNet.csproj.CoreCompileInputs.cache
+C:\Users\6152794\source\repos\SampleVBNet\SampleVBNet\bin\Debug\SampleVBNet.exe.config
+C:\Users\6152794\source\repos\SampleVBNet\SampleVBNet\bin\Debug\SampleVBNet.exe
+C:\Users\6152794\source\repos\SampleVBNet\SampleVBNet\bin\Debug\SampleVBNet.pdb
+C:\Users\6152794\source\repos\SampleVBNet\SampleVBNet\obj\Debug\SampleVBNet.exe
+C:\Users\6152794\source\repos\SampleVBNet\SampleVBNet\obj\Debug\SampleVBNet.pdb
+C:\Users\6152794\source\repos\SampleVBNet\SampleVBNet\obj\Debug\SampleVBNet.exe.config
+C:\Users\6152794\source\repos\SampleVBNet\SampleVBNet\bin\Debug\Samplelib.dll
+C:\Users\6152794\source\repos\SampleVBNet\SampleVBNet\bin\Debug\Samplelib.pdb
+C:\Users\6152794\source\repos\SampleVBNet\SampleVBNet\obj\Debug\SampleVB.2E706397.Up2Date

@@ -1,0 +1,6 @@
+C:\Users\6152794\source\repos\SampleVBNet\Samplelib\bin\Debug\Samplelib.dll
+C:\Users\6152794\source\repos\SampleVBNet\Samplelib\bin\Debug\Samplelib.pdb
+C:\Users\6152794\source\repos\SampleVBNet\Samplelib\obj\Debug\Samplelib.csproj.AssemblyReference.cache
+C:\Users\6152794\source\repos\SampleVBNet\Samplelib\obj\Debug\Samplelib.csproj.CoreCompileInputs.cache
+C:\Users\6152794\source\repos\SampleVBNet\Samplelib\obj\Debug\Samplelib.dll
+C:\Users\6152794\source\repos\SampleVBNet\Samplelib\obj\Debug\Samplelib.pdb
