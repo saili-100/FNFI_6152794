@@ -1,0 +1,7 @@
+C:\Users\6152794\source\repos\SampleConApp\SampleWinConsole\bin\Debug\SampleWinConsole.exe.config
+C:\Users\6152794\source\repos\SampleConApp\SampleWinConsole\bin\Debug\SampleWinConsole.exe
+C:\Users\6152794\source\repos\SampleConApp\SampleWinConsole\bin\Debug\SampleWinConsole.pdb
+C:\Users\6152794\source\repos\SampleConApp\SampleWinConsole\obj\Debug\SampleWinConsole.csproj.AssemblyReference.cache
+C:\Users\6152794\source\repos\SampleConApp\SampleWinConsole\obj\Debug\SampleWinConsole.csproj.CoreCompileInputs.cache
+C:\Users\6152794\source\repos\SampleConApp\SampleWinConsole\obj\Debug\SampleWinConsole.exe
+C:\Users\6152794\source\repos\SampleConApp\SampleWinConsole\obj\Debug\SampleWinConsole.pdb
