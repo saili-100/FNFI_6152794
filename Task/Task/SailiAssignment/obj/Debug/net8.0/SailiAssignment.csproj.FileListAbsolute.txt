@@ -1,0 +1,14 @@
+C:\Users\6152794\source\repos\Task\SailiAssignment\bin\Debug\net8.0\SailiAssignment.exe
+C:\Users\6152794\source\repos\Task\SailiAssignment\bin\Debug\net8.0\SailiAssignment.deps.json
+C:\Users\6152794\source\repos\Task\SailiAssignment\bin\Debug\net8.0\SailiAssignment.runtimeconfig.json
+C:\Users\6152794\source\repos\Task\SailiAssignment\bin\Debug\net8.0\SailiAssignment.dll
+C:\Users\6152794\source\repos\Task\SailiAssignment\bin\Debug\net8.0\SailiAssignment.pdb
+C:\Users\6152794\source\repos\Task\SailiAssignment\obj\Debug\net8.0\SailiAssignment.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\6152794\source\repos\Task\SailiAssignment\obj\Debug\net8.0\SailiAssignment.AssemblyInfoInputs.cache
+C:\Users\6152794\source\repos\Task\SailiAssignment\obj\Debug\net8.0\SailiAssignment.AssemblyInfo.cs
+C:\Users\6152794\source\repos\Task\SailiAssignment\obj\Debug\net8.0\SailiAssignment.csproj.CoreCompileInputs.cache
+C:\Users\6152794\source\repos\Task\SailiAssignment\obj\Debug\net8.0\SailiAssignment.dll
+C:\Users\6152794\source\repos\Task\SailiAssignment\obj\Debug\net8.0\refint\SailiAssignment.dll
+C:\Users\6152794\source\repos\Task\SailiAssignment\obj\Debug\net8.0\SailiAssignment.pdb
+C:\Users\6152794\source\repos\Task\SailiAssignment\obj\Debug\net8.0\SailiAssignment.genruntimeconfig.cache
+C:\Users\6152794\source\repos\Task\SailiAssignment\obj\Debug\net8.0\ref\SailiAssignment.dll

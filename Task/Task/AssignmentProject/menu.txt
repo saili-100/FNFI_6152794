@@ -1,0 +1,5 @@
+﻿******** Menu ********
+1. Add Expense
+2. Update Expense
+3. Get All Expenses
+4. Get Expense By Category
