@@ -1,0 +1,58 @@
+{
+  "contacts": [
+    {
+      "id": "1",
+      "phoneno": 9874561589,
+      "name": "Saili",
+      "photo": "pic10.png"
+    },
+    {
+      "id": "2",
+      "phoneno": 9874871589,
+      "name": "Anuja",
+      "photo": "pic4.png"
+    },
+    {
+      "id": "3",
+      "phoneno": 9874871589,
+      "name": "Shreya",
+      "photo": "pic10.png"
+    },
+    {
+      "id": "4",
+      "phoneno": 9878761589,
+      "name": "Raghav",
+      "photo": "pic12.png"
+    },
+    {
+      "id": "5",
+      "phoneno": 9874561879,
+      "name": "John",
+      "photo": "pic10.png"
+    },
+    {
+      "id": "6",
+      "phoneno": 9874567329,
+      "name": "Mike",
+      "photo": "pic11.png"
+    },
+    {
+      "id": "7",
+      "name": "Amulya",
+      "phoneno": "9874561589",
+      "photo": "pic12.png"
+    },
+    {
+      "id": "8",
+      "name": "Sam",
+      "phoneno": "9874569876",
+      "photo": "pic1.png"
+    },
+    {
+      "id": "10",
+      "name": "Max",
+      "phoneno": "9874567894",
+      "photo": "pic2.png"
+    }
+  ]
+}
